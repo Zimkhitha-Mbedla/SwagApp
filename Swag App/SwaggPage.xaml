@@ -1,0 +1,34 @@
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Swag_App.SwaggPage"  Title="{Binding Name}" Background="ORANGE">
+
+    <StackLayout Margin="20" VerticalOptions="StartAndExpand">
+        <Label Text="NAME" TextColor="Black" FontSize="Small" FontFamily="Times New Roman" />
+        <Entry Text="{Binding Name}" />
+        <Label Text="GENDER" TextColor="Black" FontSize="Small" FontFamily="Times New Roman" />
+        <Entry Text="{Binding Gender}"  />
+        <Label Text="T-SHIRT SIZE" TextColor="Black" FontSize="Small" FontFamily="Times New Roman"/>
+        <Entry Text="Binding T-shirt size"/>
+
+
+
+
+        <Label Text=" DATE OF ORDER" TextColor="Black" FontSize="Small" FontFamily="Times New Roman" />
+        <Entry Text="{Binding dateoforder}" />
+        <Label Text="T-SHIRT COLOR" TextColor="Black" FontSize="Small" FontFamily="Times New Roman" />
+        <Entry Text="{Binding T-shirtname}" />
+        <Label Text="DONE" TextColor="Black" FontSize="Small" FontFamily="Times New Roman" />
+        <Switch IsToggled="{Binding Done }" Background="pink" />
+        <Button Text="SAVE"
+                Clicked="OnSaveClicked" Background="aqua" />
+
+
+        <Button x:Name="OrderItemsButton" Text="ORDER ITEMS" Background="wheat"
+                Clicked="OrderItemsButton_Clicked" />
+
+
+
+    </StackLayout>
+</ContentPage>
+    
+    

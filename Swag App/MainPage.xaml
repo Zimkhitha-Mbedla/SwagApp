@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Swag_App.MainPage" Title="dotNetSwag Databinding" Background="orange">
+
+    <ListView x:Name ="SwagAppListView" ItemsSource="{Binding DotNetSwag}" ItemTapped="SwagAppListView_ItemTapped" SelectionMode="None"    HasUnevenRows="True">
+        
+
+    <ListView.ItemTemplate>
+        <DataTemplate >
+            <ViewCell>
+                    <Grid>
+
+                        <Grid.RowDefinitions>
+                            
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width ="Auto" />
+                            <ColumnDefinition Width ="3*" />
+                            <ColumnDefinition Width ="*" />
+                            </Grid.ColumnDefinitions>
+
+                                <Label Text="{Binding Name}" Grid.Row="0" Grid.Column="0"></Label>
+                                <Entry Grid.Row="0" Grid.Column="1"/>
+                                <Label Text="GENDER" Grid.Row="0" Grid.Column="0"/>
+             <Entry Grid.Row="0" Grid.Column="1"/>
+             <Label Text="T-SHIRT SIZE" FontSize="Medium"  Grid.Row="0" Grid.Column="0"/>
+                                <Entry Grid.Row="0" Grid.Column =" 1"/>
+                                <Label Text="DATE OF ORDER" FontSize="Medium"  Grid.Row="0" Grid.Column="0"/>
+             <Entry Grid.Row="0" Grid.Column="1"/>
+             <Label Text="T-SHIRT COLOR" FontSize="Medium"  Grid.Row="0" Grid.Column="0"/>
+             <Entry Grid.Row="0" Grid.Column="1"/>
+             <Label Text="SHIPPING ADDRESS" FontSize="Medium"  Grid.Row="0" Grid.Column="0"/>
+             <Entry Grid.Row="0" Grid.Column="1"/>
+                
+              </Grid>
+            </ViewCell>
+        </DataTemplate>
+        </ListView.ItemTemplate>
+        
+        
+    </ListView>
+
+
+</ContentPage>
